@@ -59,3 +59,5 @@ export class Order {
         console.log('Email sent to customer!');
     }
 }
+
+export {};
