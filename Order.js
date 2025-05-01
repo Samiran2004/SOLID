@@ -23,18 +23,6 @@ var Order = /** @class */ (function () {
     Order.prototype.removeProduct = function (productId) {
         this.products = this.products.filter(function (product) { return product.id !== productId; });
     };
-    Order.prototype.calculatePricing = function () {
-        return this.products.reduce(function (total, product) { return total + product.price; }, 0);
-    };
-    Order.prototype.generateInvoice = function () {
-        var totalAmount = 0;
-        console.log("\n            Invoice Date: ".concat(new Date().toDateString(), "\n            ----------------------\n            Product Name\tPrice\n            ----------------------"));
-        this.products.forEach(function (product) {
-            console.log("".concat(product.name, "\t").concat(product.price));
-            totalAmount += product.price;
-        });
-        console.log("\n            ----------------------\n            Total Amount: ".concat(totalAmount, "\n        "));
-    };
     Order.prototype.processPayment = function () {
         console.log('Process payment...');
         console.log('Payment process successfully!');

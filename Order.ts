@@ -25,30 +25,6 @@ export class Order {
         this.products = this.products.filter(product => product.id !== productId);
     }
 
-    calculatePricing(): number {
-        return this.products.reduce((total, product) => total + product.price, 0);
-    }
-
-    generateInvoice(): void {
-        let totalAmount = 0;
-
-        console.log(`
-            Invoice Date: ${new Date().toDateString()}
-            ----------------------
-            Product Name\tPrice
-            ----------------------`);
-
-        this.products.forEach((product) => {
-            console.log(`${product.name}\t${product.price}`);
-            totalAmount += product.price;
-        });
-
-        console.log(`
-            ----------------------
-            Total Amount: ${totalAmount}
-        `);
-    }
-
     processPayment() {
         console.log('Process payment...');
 
@@ -60,4 +36,4 @@ export class Order {
     }
 }
 
-export {};
+export { };
