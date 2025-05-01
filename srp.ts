@@ -1,6 +1,7 @@
 import { Order, Product } from "./Order";
 import { PricingCalc } from "./PricingCalc";
 import { GenerateInvoice } from "./GenerateInvoice";
+import { PaymentProcessor } from "./PaymentProcessor";
 
 // Create products
 const product1 = new Product(1, 'Product 1', 100);
@@ -22,6 +23,7 @@ const generateInvoice = new GenerateInvoice();
 generateInvoice.generateInvoice(order.getProduct(), totalPricing);
 
 // Process payment
-order.processPayment();
+const payment = new PaymentProcessor();
+payment.processPayment();
 
 export { };

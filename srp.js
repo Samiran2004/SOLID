@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var Order_1 = require("./Order");
 var PricingCalc_1 = require("./PricingCalc");
 var GenerateInvoice_1 = require("./GenerateInvoice");
+var PaymentProcessor_1 = require("./PaymentProcessor");
 // Create products
 var product1 = new Order_1.Product(1, 'Product 1', 100);
 var product2 = new Order_1.Product(2, 'Product 2', 200);
@@ -19,4 +20,5 @@ var totalPricing = pricingCalc.calculatePricing(order.getProduct());
 var generateInvoice = new GenerateInvoice_1.GenerateInvoice();
 generateInvoice.generateInvoice(order.getProduct(), totalPricing);
 // Process payment
-order.processPayment();
+var payment = new PaymentProcessor_1.PaymentProcessor();
+payment.processPayment();

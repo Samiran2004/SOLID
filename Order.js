@@ -23,12 +23,6 @@ var Order = /** @class */ (function () {
     Order.prototype.removeProduct = function (productId) {
         this.products = this.products.filter(function (product) { return product.id !== productId; });
     };
-    Order.prototype.processPayment = function () {
-        console.log('Process payment...');
-        console.log('Payment process successfully!');
-        console.log('Added to accounting system!');
-        console.log('Email sent to customer!');
-    };
     return Order;
 }());
 exports.Order = Order;
