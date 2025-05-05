@@ -37,3 +37,19 @@ The OCP encourages designing modules that can be extended (e.g., by adding new c
 > **Definition**: Subtypes must be substitutable for their base types without altering the correctness of the program.
 
 This principle ensures that a subclass can stand in for its superclass without breaking the functionality. Violating LSP leads to fragile code and unexpected behavior when polymorphism is used.
+
+---
+
+## ✅ 4. Interface Segregation Principle (ISP)
+
+> **Definition**: Clients should not be forced to depend on interfaces they do not use.
+
+The ISP advocates splitting large, bloated interfaces into smaller, more specific ones so that implementing classes only need to concern themselves with the methods that are relevant to them.
+
+### Why it matters:
+
+- Prevents unnecessary method implementations.
+- Encourages the creation of focused and reusable interfaces.
+- Helps avoid "empty" or irrelevant method definitions in implementing classes.
+
+This principle leads to cleaner and more maintainable code, especially in large applications where different classes require different capabilities.
