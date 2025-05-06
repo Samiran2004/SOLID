@@ -42,14 +42,20 @@ This principle ensures that a subclass can stand in for its superclass without b
 
 ## ✅ 4. Interface Segregation Principle (ISP)
 
-> **Definition**: Clients should not be forced to depend on interfaces they do not use.
+> **Definition**: No client should be forced to depend on methods it does not use.
 
-The ISP advocates splitting large, bloated interfaces into smaller, more specific ones so that implementing classes only need to concern themselves with the methods that are relevant to them.
+This principle encourages splitting large interfaces into smaller, more specific ones so that classes only need to implement the methods that are relevant to them. It leads to cleaner and more decoupled code.
 
-### Why it matters:
+---
 
-- Prevents unnecessary method implementations.
-- Encourages the creation of focused and reusable interfaces.
-- Helps avoid "empty" or irrelevant method definitions in implementing classes.
+## ✅ 5. Dependency Inversion Principle (DIP)
 
-This principle leads to cleaner and more maintainable code, especially in large applications where different classes require different capabilities.
+> **Definition**: High-level modules should not depend on low-level modules. Both should depend on abstractions.
+
+This principle advocates that:
+- Abstractions should not depend on details.
+- Details should depend on abstractions.
+
+By depending on interfaces or abstract classes rather than concrete implementations, systems become more decoupled, easier to test, and more flexible to change.
+
+---
